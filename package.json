@@ -1,0 +1,19 @@
+{
+  "name": "ebp-grid",
+  "version": "1.0.0",
+  "description": "Creación del framewor css",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ebpproject/ebp-grid.git"
+  },
+  "author": "Ebpproject",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ebpproject/ebp-grid/issues"
+  },
+  "homepage": "https://github.com/ebpproject/ebp-grid#readme"
+}
