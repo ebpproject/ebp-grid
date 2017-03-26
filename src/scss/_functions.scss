@@ -1,0 +1,21 @@
+// We will develop the functions of our sass
+// Transformation of px to em
+@function em($element, $context:16px) {
+    @if type-of($element)==number and unit($element)=='px' {
+        @return ($element /$context) * 1em;
+    }
+}
+
+// Transformation of px to rem
+@function rem($element) {
+    @if type-of($element)==number and unit($element)=='px' {
+        @return ($element /16px) * 1rem;
+    }
+}
+
+// Color palette
+$colors: ( dark: #000, whites: #FFF, dark-gray:#222, light-gray:#DDD, grays: #999);
+// function of colors
+@function color($color) {
+    @return map-get($colors, $color);
+}
