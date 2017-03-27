@@ -19,3 +19,25 @@ $colors: ( dark: #000, whites: #FFF, dark-gray:#222, light-gray:#DDD, grays: #99
 @function color($color) {
     @return map-get($colors, $color);
 }
+
+// Variable of the width maximum
+
+$max-width : 1200px;
+
+@mixin container(){
+	display: block;
+	width: 100%;
+	margin: auto;
+	background-color: #EEE;
+}
+
+@mixin item(){
+	display: block;
+	padding: 16px;
+	padding: rem(16px);
+	background-color: #CCC;
+}
+
+// mobile first 
+
+$breakpoints : ( sm : 20em, mo : 30em, md : 37.5em, tb: 48em, lg : 64em, hd : 75em);
