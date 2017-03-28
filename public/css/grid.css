@@ -1,4 +1,5 @@
-.container, .container-full {
+.container,
+.container-full {
   display: block;
   width: 100%;
   margin: auto;
@@ -14,167 +15,167 @@
   background-color: #CCC; }
 
 .sm-1 {
-  width: 9.33333%; }
+  width: 8.33333%; }
 
 .sm-2 {
-  width: 10.33333%; }
+  width: 16.66667%; }
 
 .sm-3 {
-  width: 11.33333%; }
+  width: 25%; }
 
 .sm-4 {
-  width: 12.33333%; }
+  width: 33.33333%; }
 
 .sm-5 {
-  width: 13.33333%; }
+  width: 41.66667%; }
 
 .sm-6 {
-  width: 14.33333%; }
+  width: 50%; }
 
 .sm-7 {
-  width: 15.33333%; }
+  width: 58.33333%; }
 
 .sm-8 {
-  width: 16.33333%; }
+  width: 66.66667%; }
 
 .sm-9 {
-  width: 17.33333%; }
+  width: 75%; }
 
 .sm-10 {
-  width: 18.33333%; }
+  width: 83.33333%; }
 
 .sm-11 {
-  width: 19.33333%; }
+  width: 91.66667%; }
 
 .sm-12 {
-  width: 20.33333%; }
+  width: 100%; }
 
 @media all and (min-width: 30em) {
   .mo-1 {
-    width: 9.33333%; }
+    width: 8.33333%; }
   .mo-2 {
-    width: 10.33333%; }
+    width: 16.66667%; }
   .mo-3 {
-    width: 11.33333%; }
+    width: 25%; }
   .mo-4 {
-    width: 12.33333%; }
+    width: 33.33333%; }
   .mo-5 {
-    width: 13.33333%; }
+    width: 41.66667%; }
   .mo-6 {
-    width: 14.33333%; }
+    width: 50%; }
   .mo-7 {
-    width: 15.33333%; }
+    width: 58.33333%; }
   .mo-8 {
-    width: 16.33333%; }
+    width: 66.66667%; }
   .mo-9 {
-    width: 17.33333%; }
+    width: 75%; }
   .mo-10 {
-    width: 18.33333%; }
+    width: 83.33333%; }
   .mo-11 {
-    width: 19.33333%; }
+    width: 91.66667%; }
   .mo-12 {
-    width: 20.33333%; } }
+    width: 100%; } }
 
 @media all and (min-width: 37.5em) {
   .md-1 {
-    width: 9.33333%; }
+    width: 8.33333%; }
   .md-2 {
-    width: 10.33333%; }
+    width: 16.66667%; }
   .md-3 {
-    width: 11.33333%; }
+    width: 25%; }
   .md-4 {
-    width: 12.33333%; }
+    width: 33.33333%; }
   .md-5 {
-    width: 13.33333%; }
+    width: 41.66667%; }
   .md-6 {
-    width: 14.33333%; }
+    width: 50%; }
   .md-7 {
-    width: 15.33333%; }
+    width: 58.33333%; }
   .md-8 {
-    width: 16.33333%; }
+    width: 66.66667%; }
   .md-9 {
-    width: 17.33333%; }
+    width: 75%; }
   .md-10 {
-    width: 18.33333%; }
+    width: 83.33333%; }
   .md-11 {
-    width: 19.33333%; }
+    width: 91.66667%; }
   .md-12 {
-    width: 20.33333%; } }
+    width: 100%; } }
 
 @media all and (min-width: 48em) {
   .tb-1 {
-    width: 9.33333%; }
+    width: 8.33333%; }
   .tb-2 {
-    width: 10.33333%; }
+    width: 16.66667%; }
   .tb-3 {
-    width: 11.33333%; }
+    width: 25%; }
   .tb-4 {
-    width: 12.33333%; }
+    width: 33.33333%; }
   .tb-5 {
-    width: 13.33333%; }
+    width: 41.66667%; }
   .tb-6 {
-    width: 14.33333%; }
+    width: 50%; }
   .tb-7 {
-    width: 15.33333%; }
+    width: 58.33333%; }
   .tb-8 {
-    width: 16.33333%; }
+    width: 66.66667%; }
   .tb-9 {
-    width: 17.33333%; }
+    width: 75%; }
   .tb-10 {
-    width: 18.33333%; }
+    width: 83.33333%; }
   .tb-11 {
-    width: 19.33333%; }
+    width: 91.66667%; }
   .tb-12 {
-    width: 20.33333%; } }
+    width: 100%; } }
 
 @media all and (min-width: 64em) {
   .lg-1 {
-    width: 9.33333%; }
+    width: 8.33333%; }
   .lg-2 {
-    width: 10.33333%; }
+    width: 16.66667%; }
   .lg-3 {
-    width: 11.33333%; }
+    width: 25%; }
   .lg-4 {
-    width: 12.33333%; }
+    width: 33.33333%; }
   .lg-5 {
-    width: 13.33333%; }
+    width: 41.66667%; }
   .lg-6 {
-    width: 14.33333%; }
+    width: 50%; }
   .lg-7 {
-    width: 15.33333%; }
+    width: 58.33333%; }
   .lg-8 {
-    width: 16.33333%; }
+    width: 66.66667%; }
   .lg-9 {
-    width: 17.33333%; }
+    width: 75%; }
   .lg-10 {
-    width: 18.33333%; }
+    width: 83.33333%; }
   .lg-11 {
-    width: 19.33333%; }
+    width: 91.66667%; }
   .lg-12 {
-    width: 20.33333%; } }
+    width: 100%; } }
 
 @media all and (min-width: 75em) {
   .hd-1 {
-    width: 9.33333%; }
+    width: 8.33333%; }
   .hd-2 {
-    width: 10.33333%; }
+    width: 16.66667%; }
   .hd-3 {
-    width: 11.33333%; }
+    width: 25%; }
   .hd-4 {
-    width: 12.33333%; }
+    width: 33.33333%; }
   .hd-5 {
-    width: 13.33333%; }
+    width: 41.66667%; }
   .hd-6 {
-    width: 14.33333%; }
+    width: 50%; }
   .hd-7 {
-    width: 15.33333%; }
+    width: 58.33333%; }
   .hd-8 {
-    width: 16.33333%; }
+    width: 66.66667%; }
   .hd-9 {
-    width: 17.33333%; }
+    width: 75%; }
   .hd-10 {
-    width: 18.33333%; }
+    width: 83.33333%; }
   .hd-11 {
-    width: 19.33333%; }
+    width: 91.66667%; }
   .hd-12 {
-    width: 20.33333%; } }
+    width: 100%; } }

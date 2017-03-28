@@ -9,6 +9,27 @@ html(lang="es")
 			link(rel="stylesheet", href=`../${css}`)
 
 	body
+		.container
+			h1= title
+		.container
+			article.item.sm-12.float-left.caja-float: h2 Maquetando con Float
+		.container
+			article.item.sm-12.mo-6.md-4.lg-2.float-left.caja-float 1 
+			article.item.sm-12.mo-6.md-4.lg-2.float-left.caja-float 2 
+			article.item.sm-12.mo-6.md-4.lg-2.float-left.caja-float 3 
+			article.item.sm-12.mo-6.md-4.lg-2.float-left.caja-float 4 
+			article.item.sm-12.mo-6.md-4.lg-2.float-left.caja-float 5
+			article.item.sm-12.mo-6.md-4.lg-2.float-left.caja-float 6 
+		.container.f-cero
+			article.item.sm-12.i-b.caja-i-b: h2 Maquetando con display:inline-block;
+		.container.f-cero
+			article.item.sm-12.mo-6.md-4.lg-2.i-b.caja-i-b 1 
+			article.item.sm-12.mo-6.md-4.lg-2.i-b.caja-i-b 2 
+			article.item.sm-12.mo-6.md-4.lg-2.i-b.caja-i-b 3 
+			article.item.sm-12.mo-6.md-4.lg-2.i-b.caja-i-b 4 
+			article.item.sm-12.mo-6.md-4.lg-2.i-b.caja-i-b 5
+			article.item.sm-12.mo-6.md-4.lg-2.i-b.caja-i-b 6
+		
 		//- All javacript
 		each js in files.JS
 			script(src=`../${js}`)

@@ -1,29 +1,33 @@
 @import "functions";
-
-.container, .container-full{
-	@include container;
-}
-.container{
-	max-width: $max-width;
-}
-.item{
-	@include item;
+.container,
+.container-full {
+    @include container;
 }
 
-@each $size, $screen-size in $breakpoints{
-	@if $size == sm {
-		@for $i from 1 through 12 {
-			.sm-#{$i}{
-				width: (100% / 12) + $i;
-			}
-		}
-	}@else{
-		@media all and (min-width: $screen-size){
-			@for $i from 1 through 12 {
-			.#{$size}-#{$i}{
-				width: (100% / 12) + $i;
-			}
-		}
-		}
-	}
+.container {
+    max-width: $max-width;
+}
+
+.item {
+    @include item;
+}
+
+@each $size,
+$screen-size in $breakpoints {
+    @if $size==sm {
+        @for $i from 1 through 12 {
+            .sm-#{$i} {
+                width: $i * (100%/12);
+            }
+        }
+    }
+    @else {
+        @media all and (min-width: $screen-size) {
+            @for $i from 1 through 12 {
+                .#{$size}-#{$i} {
+                    width: (100% / 12) * $i;
+                }
+            }
+        }
+    }
 }

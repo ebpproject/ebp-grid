@@ -1,11 +1,11 @@
 'use strict';
- import gulp from 'gulp';
- import pug from 'gulp-pug';
- import sass from 'gulp-sass';
- import babel from 'gulp-babel';
+import gulp from 'gulp';
+import pug from 'gulp-pug';
+import sass from 'gulp-sass';
+import babel from 'gulp-babel';
 
-    /** Paths of application directories */
-  const  dir = {
+/** Paths of application directories */
+const dir = {
         src: 'src',
         public: 'public'
 
@@ -19,8 +19,9 @@
          * Go all css files
          */
         CSS: [
-			`${dir.public}/css/reset.css`,
-			`${dir.public}/css/grid.css`,
+            `${dir.public}/css/reset.css`,
+            `${dir.public}/css/grid.css`,
+            `${dir.public}/css/layout.css`,
             `${dir.public}/css/styles.css`
         ],
         /**
