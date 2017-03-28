@@ -1,0 +1,1918 @@
+    @import "functions";
+    @each $size,
+    $screen-size in $breakpoints {
+        @if $size==sm {
+            /* Técnica de float left/right */
+            .float {
+                &-left {
+                    float: left;
+                }
+                &-right {
+                    float: right;
+                }
+            }
+            .clear,
+            .clear::after,
+            .clear::before {
+                clear: both;
+            }
+            .clear::after,
+            .clear::before {
+                content: "";
+                display: block;
+            }
+            /* Técnica display: inline-block; */
+            .i-b {
+                display: inline-block;
+                font-size: 1rem;
+            }
+            /* Técnica display:flex */
+            .flex {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+            }
+            .inline {
+                &-flex {
+                    display: -ms-inline-flexbox;
+                    display: -webkit-inline-flex;
+                    display: inline-flex;
+                }
+            }
+            .flex {
+                &-row {
+                    -webkit-flex-direction: row;
+                    -ms-flex-direction: row;
+                    flex-direction: row;
+                }
+                &-row-reverse {
+                    -webkit-flex-direction: row-reverse;
+                    -ms-flex-direction: row-reverse;
+                    flex-direction: row-reverse;
+                }
+                &-column {
+                    -webkit-flex-direction: column;
+                    -ms-flex-direction: column;
+                    flex-direction: column;
+                }
+                &-column-reverse {
+                    -webkit-flex-direction: column-reverse;
+                    -ms-flex-direction: column-reverse;
+                    flex-direction: column-reverse;
+                }
+                &-nowrap {
+                    -webkit-flex-wrap: nowrap;
+                    -ms-flex-wrap: nowrap;
+                    flex-wrap: nowrap;
+                }
+                &-wrap {
+                    -webkit-flex-wrap: wrap;
+                    -ms-flex-wrap: wrap;
+                    flex-wrap: wrap;
+                }
+                &-wrap-reverse {
+                    -webkit-flex-wrap: wrap-reverse;
+                    -ms-flex-wrap: wrap-reverse;
+                    flex-wrap: wrap-reverse;
+                }
+            }
+            .jc {
+                &-flex {
+                    &-start {
+                        justify-content: flex-start;
+                    }
+                    &-end {
+                        justify-content: flex-end
+                    }
+                }
+                &-space {
+                    &-around {
+                        justify-content: space-around;
+                    }
+                    &-between {
+                        justify-content: space-between;
+                    }
+                }
+            }
+            .ai {
+                &-flex {
+                    &-start {
+                        align-items: flex-start;
+                    }
+                    &-end {
+                        align-items: flex-end
+                    }
+                }
+                &-stretch {
+                    align-items: stretch;
+                }
+                &-center {
+                    align-items: center;
+                }
+                &-baseline {
+                    align-items: baseline;
+                }
+            }
+            .ac {
+                &-flex {
+                    &-start {
+                        align-content: flex-start;
+                    }
+                    &-end {
+                        align-content: flex-end
+                    }
+                }
+                &-stretch {
+                    align-content: stretch;
+                }
+                &-space {
+                    &-around {
+                        align-content: space-around;
+                    }
+                    &-between {
+                        align-content: space-between;
+                    }
+                }
+            }
+            /* flex hijos */
+            .flex {
+                &-none {
+                    -ms-flex: none;
+                    -webkit-flex: none;
+                    flex: none;
+                }
+                &-auto {
+                    -ms-flex: auto;
+                    -webkit-flex: auto;
+                    flex: auto;
+                }
+            }
+            .as {
+                &-flex {
+                    &-start {
+                        align-self: flex-start;
+                    }
+                    &-end {
+                        align-self: flex-end
+                    }
+                }
+                &-stretch {
+                    align-self: stretch;
+                }
+                &-center {
+                    align-self: center;
+                }
+                &-baseline {
+                    align-self: baseline;
+                }
+                &-auto {
+                    align-self: auto;
+                }
+            }
+            /* Alineaciones verticales y horizontales */
+            .v {
+                &-top {
+                    vertical-align: top;
+                }
+                &-middle {
+                    vertical-align: middle;
+                }
+                &-bottom {
+                    vertical-align: bottom;
+                }
+                &-baseline {
+                    vertical-align: baseline;
+                }
+            }
+            .left {
+                text-align: left;
+            }
+            .center {
+                text-align: center;
+            }
+            .right {
+                text-align: right;
+            }
+            .justify {
+                text-align: justify;
+            }
+            /* Tamaño de Fuente */
+            .f {
+                &-cero {
+                    font-size: 0;
+                }
+                &_25 {
+                    font-size: 4px;
+                    font-size: rem(4px);
+                }
+                &_5 {
+                    font-size: 8px;
+                    font-size: rem(8px);
+                }
+                &_75 {
+                    font-size: 12px;
+                    font-size: rem(12px);
+                }
+                &-uno {
+                    font-size: 16px;
+                    font-size: rem(16px);
+                }
+                &-uno {
+                    &_25 {
+                        font-size: 20px;
+                        font-size: rem(20px);
+                    }
+                    &_5 {
+                        font-size: 24px;
+                        font-size: rem(24px);
+                    }
+                    &_75 {
+                        font-size: 28px;
+                        font-size: rem(28px);
+                    }
+                }
+                &-dos {
+                    font-size: 32px;
+                    font-size: rem(32px);
+                }
+                &-dos {
+                    &_5 {
+                        font-size: 40px;
+                        font-size: rem(40px);
+                    }
+                }
+                &-tres {
+                    font-size: 48px;
+                    font-size: rem(48px);
+                }
+                &-tres {
+                    &_5 {
+                        font-size: 56px;
+                        font-size: rem(56px);
+                    }
+                }
+                &-cuatro {
+                    font-size: 64px;
+                    font-size: rem(64px);
+                }
+                &-cuatro {
+                    &_5 {
+                        font-size: 72px;
+                        font-size: rem(72px);
+                    }
+                }
+                &-cinco {
+                    font-size: 80px;
+                    font-size: rem(80px);
+                }
+            }
+            /* margin y padding*/
+            .m {
+                &-auto {
+                    margin: auto;
+                }
+                &-cero {
+                    margin: 0;
+                }
+                &_25 {
+                    margin: 4px;
+                    margin: rem(4px);
+                }
+                &_5 {
+                    margin: 8px;
+                    margin: rem(8px);
+                }
+                &_75 {
+                    margin: 12px;
+                    margin: rem(12px);
+                }
+                &-uno {
+                    margin: 16px;
+                    margin: rem(16px);
+                }
+                &-uno {
+                    &_25 {
+                        margin: 20px;
+                        margin: rem(20px);
+                    }
+                    &_5 {
+                        margin: 24px;
+                        margin: rem(24px);
+                    }
+                    &_75 {
+                        margin: 28px;
+                        margin: rem(28px);
+                    }
+                }
+                &-dos {
+                    margin: 32px;
+                    margin: rem(32px);
+                }
+                &-dos {
+                    &_5 {
+                        margin: 40px;
+                        margin: rem(40px);
+                    }
+                }
+                &-tres {
+                    margin: 48px;
+                    margin: rem(48px);
+                }
+                &-tres {
+                    &_5 {
+                        margin: 56px;
+                        margin: rem(56px);
+                    }
+                }
+                &-cuatro {
+                    margin: 64px;
+                    margin: rem(64px);
+                }
+                &-cuatro {
+                    &_5 {
+                        margin: 72px;
+                        margin: rem(72px);
+                    }
+                }
+                &-top {
+                    &-cero {
+                        margin-top: 0;
+                    }
+                    &_25 {
+                        margin-top: 4px;
+                        margin-top: rem(4px);
+                    }
+                    &_5 {
+                        margin-top: 8px;
+                        margin-top: rem(8px);
+                    }
+                    &_75 {
+                        margin-top: 12px;
+                        margin-top: rem(12px);
+                    }
+                    &-uno {
+                        margin-top: 16px;
+                        margin-top: rem(16px);
+                    }
+                    &-uno {
+                        &_25 {
+                            margin-top: 20px;
+                            margin-top: rem(20px);
+                        }
+                        &_5 {
+                            margin-top: 24px;
+                            margin-top: rem(24px);
+                        }
+                        &_75 {
+                            margin-top: 28px;
+                            margin-top: rem(28px);
+                        }
+                    }
+                    &-dos {
+                        margin-top: 32px;
+                        margin-top: rem(32px);
+                    }
+                    &-dos {
+                        &_5 {
+                            margin-top: 40px;
+                            margin-top: rem(40px);
+                        }
+                    }
+                    &-tres {
+                        margin-top: 48px;
+                        margin-top: rem(48px);
+                    }
+                    &-tres {
+                        &_5 {
+                            margin-top: 56px;
+                            margin-top: rem(56px);
+                        }
+                    }
+                    &-cuatro {
+                        margin-top: 64px;
+                        margin-top: rem(64px);
+                    }
+                    &-cuatro {
+                        &_5 {
+                            margin-top: 72px;
+                            margin-top: rem(72px);
+                        }
+                    }
+                }
+                &-left {
+                    &-cero {
+                        margin-left: 0;
+                    }
+                    &_25 {
+                        margin-left: 4px;
+                        margin-left: rem(4px);
+                    }
+                    &_5 {
+                        margin-left: 8px;
+                        margin-left: rem(8px);
+                    }
+                    &_75 {
+                        margin-left: 12px;
+                        margin-left: rem(12px);
+                    }
+                    &-uno {
+                        margin-left: 16px;
+                        margin-left: rem(16px);
+                    }
+                    &-uno {
+                        &_25 {
+                            margin-left: 20px;
+                            margin-left: rem(20px);
+                        }
+                        &_5 {
+                            margin-left: 24px;
+                            margin-left: rem(24px);
+                        }
+                        &_75 {
+                            margin-left: 28px;
+                            margin-left: rem(28px);
+                        }
+                    }
+                    &-dos {
+                        margin-left: 32px;
+                        margin-left: rem(32px);
+                    }
+                    &-dos {
+                        &_5 {
+                            margin-left: 40px;
+                            margin-left: rem(40px);
+                        }
+                    }
+                    &-tres {
+                        margin-left: 48px;
+                        margin-left: rem(48px);
+                    }
+                    &-tres {
+                        &_5 {
+                            margin-left: 56px;
+                            margin-left: rem(56px);
+                        }
+                    }
+                    &-cuatro {
+                        margin-left: 64px;
+                        margin-left: rem(64px);
+                    }
+                    &-cuatro {
+                        &_5 {
+                            margin-left: 72px;
+                            margin-left: rem(72px);
+                        }
+                    }
+                }
+                &-right {
+                    &-cero {
+                        margin-right: 0;
+                    }
+                    &_25 {
+                        margin-right: 4px;
+                        margin-right: rem(4px);
+                    }
+                    &_5 {
+                        margin-right: 8px;
+                        margin-right: rem(8px);
+                    }
+                    &_75 {
+                        margin-right: 12px;
+                        margin-right: rem(12px);
+                    }
+                    &-uno {
+                        margin-right: 16px;
+                        margin-right: rem(16px);
+                    }
+                    &-uno {
+                        &_25 {
+                            margin-right: 20px;
+                            margin-right: rem(20px);
+                        }
+                        &_5 {
+                            margin-right: 24px;
+                            margin-right: rem(24px);
+                        }
+                        &_75 {
+                            margin-right: 28px;
+                            margin-right: rem(28px);
+                        }
+                    }
+                    &-dos {
+                        margin-right: 32px;
+                        margin-right: rem(32px);
+                    }
+                    &-dos {
+                        &_5 {
+                            margin-right: 40px;
+                            margin-right: rem(40px);
+                        }
+                    }
+                    &-tres {
+                        margin-right: 48px;
+                        margin-right: rem(48px);
+                    }
+                    &-tres {
+                        &_5 {
+                            margin-right: 56px;
+                            margin-right: rem(56px);
+                        }
+                    }
+                    &-cuatro {
+                        margin-right: 64px;
+                        margin-right: rem(64px);
+                    }
+                    &-cuatro {
+                        &_5 {
+                            margin-right: 72px;
+                            margin-right: rem(72px);
+                        }
+                    }
+                }
+                &-bottom {
+                    &-cero {
+                        margin-bottom: 0;
+                    }
+                    &_25 {
+                        margin-bottom: 4px;
+                        margin-bottom: rem(4px);
+                    }
+                    &_5 {
+                        margin-bottom: 8px;
+                        margin-bottom: rem(8px);
+                    }
+                    &_75 {
+                        margin-bottom: 12px;
+                        margin-bottom: rem(12px);
+                    }
+                    &-uno {
+                        margin-bottom: 16px;
+                        margin-bottom: rem(16px);
+                    }
+                    &-uno {
+                        &_25 {
+                            margin-bottom: 20px;
+                            margin-bottom: rem(20px);
+                        }
+                        &_5 {
+                            margin-bottom: 24px;
+                            margin-bottom: rem(24px);
+                        }
+                        &_75 {
+                            margin-bottom: 28px;
+                            margin-bottom: rem(28px);
+                        }
+                    }
+                    &-dos {
+                        margin-bottom: 32px;
+                        margin-bottom: rem(32px);
+                    }
+                    &-dos {
+                        &_5 {
+                            margin-bottom: 40px;
+                            margin-bottom: rem(40px);
+                        }
+                    }
+                    &-tres {
+                        margin-bottom: 48px;
+                        margin-bottom: rem(48px);
+                    }
+                    &-tres {
+                        &_5 {
+                            margin-bottom: 56px;
+                            margin-bottom: rem(56px);
+                        }
+                    }
+                    &-cuatro {
+                        margin-bottom: 64px;
+                        margin-bottom: rem(64px);
+                    }
+                    &-cuatro {
+                        &_5 {
+                            margin-bottom: 72px;
+                            margin-bottom: rem(72px);
+                        }
+                    }
+                }
+            }
+            .p {
+                &-auto {
+                    padding: auto;
+                }
+                &-cero {
+                    padding: 0;
+                }
+                &_25 {
+                    padding: 4px;
+                    padding: rem(4px);
+                }
+                &_5 {
+                    padding: 8px;
+                    padding: rem(8px);
+                }
+                &_75 {
+                    padding: 12px;
+                    padding: rem(12px);
+                }
+                &-uno {
+                    padding: 16px;
+                    padding: rem(16px);
+                }
+                &-uno {
+                    &_25 {
+                        padding: 20px;
+                        padding: rem(20px);
+                    }
+                    &_5 {
+                        padding: 24px;
+                        padding: rem(24px);
+                    }
+                    &_75 {
+                        padding: 28px;
+                        padding: rem(28px);
+                    }
+                }
+                &-dos {
+                    padding: 32px;
+                    padding: rem(32px);
+                }
+                &-dos {
+                    &_5 {
+                        padding: 40px;
+                        padding: rem(40px);
+                    }
+                }
+                &-tres {
+                    padding: 48px;
+                    padding: rem(48px);
+                }
+                &-tres {
+                    &_5 {
+                        padding: 56px;
+                        padding: rem(56px);
+                    }
+                }
+                &-cuatro {
+                    padding: 64px;
+                    padding: rem(64px);
+                }
+                &-cuatro {
+                    &_5 {
+                        padding: 72px;
+                        padding: rem(72px);
+                    }
+                }
+                &-top {
+                    &-cero {
+                        padding-top: 0;
+                    }
+                    &_25 {
+                        padding-top: 4px;
+                        padding-top: rem(4px);
+                    }
+                    &_5 {
+                        padding-top: 8px;
+                        padding-top: rem(8px);
+                    }
+                    &_75 {
+                        padding-top: 12px;
+                        padding-top: rem(12px);
+                    }
+                    &-uno {
+                        padding-top: 16px;
+                        padding-top: rem(16px);
+                    }
+                    &-uno {
+                        &_25 {
+                            padding-top: 20px;
+                            padding-top: rem(20px);
+                        }
+                        &_5 {
+                            padding-top: 24px;
+                            padding-top: rem(24px);
+                        }
+                        &_75 {
+                            padding-top: 28px;
+                            padding-top: rem(28px);
+                        }
+                    }
+                    &-dos {
+                        padding-top: 32px;
+                        padding-top: rem(32px);
+                    }
+                    &-dos {
+                        &_5 {
+                            padding-top: 40px;
+                            padding-top: rem(40px);
+                        }
+                    }
+                    &-tres {
+                        padding-top: 48px;
+                        padding-top: rem(48px);
+                    }
+                    &-tres {
+                        &_5 {
+                            padding-top: 56px;
+                            padding-top: rem(56px);
+                        }
+                    }
+                    &-cuatro {
+                        padding-top: 64px;
+                        padding-top: rem(64px);
+                    }
+                    &-cuatro {
+                        &_5 {
+                            padding-top: 72px;
+                            padding-top: rem(72px);
+                        }
+                    }
+                }
+                &-left {
+                    &-cero {
+                        padding-left: 0;
+                    }
+                    &_25 {
+                        padding-left: 4px;
+                        padding-left: rem(4px);
+                    }
+                    &_5 {
+                        padding-left: 8px;
+                        padding-left: rem(8px);
+                    }
+                    &_75 {
+                        padding-left: 12px;
+                        padding-left: rem(12px);
+                    }
+                    &-uno {
+                        padding-left: 16px;
+                        padding-left: rem(16px);
+                    }
+                    &-uno {
+                        &_25 {
+                            padding-left: 20px;
+                            padding-left: rem(20px);
+                        }
+                        &_5 {
+                            padding-left: 24px;
+                            padding-left: rem(24px);
+                        }
+                        &_75 {
+                            padding-left: 28px;
+                            padding-left: rem(28px);
+                        }
+                    }
+                    &-dos {
+                        padding-left: 32px;
+                        padding-left: rem(32px);
+                    }
+                    &-dos {
+                        &_5 {
+                            padding-left: 40px;
+                            padding-left: rem(40px);
+                        }
+                    }
+                    &-tres {
+                        padding-left: 48px;
+                        padding-left: rem(48px);
+                    }
+                    &-tres {
+                        &_5 {
+                            padding-left: 56px;
+                            padding-left: rem(56px);
+                        }
+                    }
+                    &-cuatro {
+                        padding-left: 64px;
+                        padding-left: rem(64px);
+                    }
+                    &-cuatro {
+                        &_5 {
+                            padding-left: 72px;
+                            padding-left: rem(72px);
+                        }
+                    }
+                }
+                &-right {
+                    &-cero {
+                        padding-right: 0;
+                    }
+                    &_25 {
+                        padding-right: 4px;
+                        padding-right: rem(4px);
+                    }
+                    &_5 {
+                        padding-right: 8px;
+                        padding-right: rem(8px);
+                    }
+                    &_75 {
+                        padding-right: 12px;
+                        padding-right: rem(12px);
+                    }
+                    &-uno {
+                        padding-right: 16px;
+                        padding-right: rem(16px);
+                    }
+                    &-uno {
+                        &_25 {
+                            padding-right: 20px;
+                            padding-right: rem(20px);
+                        }
+                        &_5 {
+                            padding-right: 24px;
+                            padding-right: rem(24px);
+                        }
+                        &_75 {
+                            padding-right: 28px;
+                            padding-right: rem(28px);
+                        }
+                    }
+                    &-dos {
+                        padding-right: 32px;
+                        padding-right: rem(32px);
+                    }
+                    &-dos {
+                        &_5 {
+                            padding-right: 40px;
+                            padding-right: rem(40px);
+                        }
+                    }
+                    &-tres {
+                        padding-right: 48px;
+                        padding-right: rem(48px);
+                    }
+                    &-tres {
+                        &_5 {
+                            padding-right: 56px;
+                            padding-right: rem(56px);
+                        }
+                    }
+                    &-cuatro {
+                        padding-right: 64px;
+                        padding-right: rem(64px);
+                    }
+                    &-cuatro {
+                        &_5 {
+                            padding-right: 72px;
+                            padding-right: rem(72px);
+                        }
+                    }
+                }
+                &-bottom {
+                    &-cero {
+                        padding-bottom: 0;
+                    }
+                    &_25 {
+                        padding-bottom: 4px;
+                        padding-bottom: rem(4px);
+                    }
+                    &_5 {
+                        padding-bottom: 8px;
+                        padding-bottom: rem(8px);
+                    }
+                    &_75 {
+                        padding-bottom: 12px;
+                        padding-bottom: rem(12px);
+                    }
+                    &-uno {
+                        padding-bottom: 16px;
+                        padding-bottom: rem(16px);
+                    }
+                    &-uno {
+                        &_25 {
+                            padding-bottom: 20px;
+                            padding-bottom: rem(20px);
+                        }
+                        &_5 {
+                            padding-bottom: 24px;
+                            padding-bottom: rem(24px);
+                        }
+                        &_75 {
+                            padding-bottom: 28px;
+                            padding-bottom: rem(28px);
+                        }
+                    }
+                    &-dos {
+                        padding-bottom: 32px;
+                        padding-bottom: rem(32px);
+                    }
+                    &-dos {
+                        &_5 {
+                            padding-bottom: 40px;
+                            padding-bottom: rem(40px);
+                        }
+                    }
+                    &-tres {
+                        padding-bottom: 48px;
+                        padding-bottom: rem(48px);
+                    }
+                    &-tres {
+                        &_5 {
+                            padding-bottom: 56px;
+                            padding-bottom: rem(56px);
+                        }
+                    }
+                    &-cuatro {
+                        padding-bottom: 64px;
+                        padding-bottom: rem(64px);
+                    }
+                    &-cuatro {
+                        &_5 {
+                            padding-bottom: 72px;
+                            padding-bottom: rem(72px);
+                        }
+                    }
+                }
+            }
+            /* Borde y Display */
+            .border {
+                border: thin solid color(dark);
+            }
+            .noborder {
+                border: 0;
+            }
+            .round {
+                border-radius: 50%;
+            }
+            .noround {
+                border-radius: 0;
+            }
+            .inline {
+                display: inline;
+            }
+            .block {
+                display: block;
+            }
+            .none {
+                display: none;
+            }
+            .bullet {
+                margin-left: 16px;
+                margin-left: rem(16px);
+                list-style-type: inherit;
+                list-style-position: inside;
+            }
+            .nobullet {
+                margin-left: 0;
+                list-style-type: none;
+            }
+        }
+        @else {
+            @media all and (min-width: $screen-size) {
+                /* Técnica de float left/right */
+                .#{$size}-float {
+                    &-left {
+                        float: left;
+                    }
+                    &-right {
+                        float: right;
+                    }
+                }
+                .#{$size}-clear,
+                .#{$size}-clear::after,
+                .#{$size}-clear::before {
+                    clear: both;
+                }
+                .#{$size}-clear::after,
+                .#{$size}-clear::before {
+                    content: "";
+                    display: block;
+                }
+                /* Técnica display: inline-block; */
+                .#{$size}-i-b {
+                    display: inline-block;
+                    font-size: 1rem;
+                }
+                /* Técnica display:flex */
+                .#{$size}-flex {
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: -webkit-flex;
+                    display: flex;
+                }
+                .#{$size}-inline {
+                    &-flex {
+                        display: -ms-inline-flexbox;
+                        display: -webkit-inline-flex;
+                        display: inline-flex;
+                    }
+                }
+                .#{$size}-flex {
+                    &-row {
+                        -webkit-flex-direction: row;
+                        -ms-flex-direction: row;
+                        flex-direction: row;
+                    }
+                    &-row-reverse {
+                        -webkit-flex-direction: row-reverse;
+                        -ms-flex-direction: row-reverse;
+                        flex-direction: row-reverse;
+                    }
+                    &-column {
+                        -webkit-flex-direction: column;
+                        -ms-flex-direction: column;
+                        flex-direction: column;
+                    }
+                    &-column-reverse {
+                        -webkit-flex-direction: column-reverse;
+                        -ms-flex-direction: column-reverse;
+                        flex-direction: column-reverse;
+                    }
+                    &-nowrap {
+                        -webkit-flex-wrap: nowrap;
+                        -ms-flex-wrap: nowrap;
+                        flex-wrap: nowrap;
+                    }
+                    &-wrap {
+                        -webkit-flex-wrap: wrap;
+                        -ms-flex-wrap: wrap;
+                        flex-wrap: wrap;
+                    }
+                    &-wrap-reverse {
+                        -webkit-flex-wrap: wrap-reverse;
+                        -ms-flex-wrap: wrap-reverse;
+                        flex-wrap: wrap-reverse;
+                    }
+                }
+                .#{$size}-jc {
+                    &-flex {
+                        &-start {
+                            justify-content: flex-start;
+                        }
+                        &-end {
+                            justify-content: flex-end
+                        }
+                    }
+                    &-space {
+                        &-around {
+                            justify-content: space-around;
+                        }
+                        &-between {
+                            justify-content: space-between;
+                        }
+                    }
+                }
+                .#{$size}-ai {
+                    &-flex {
+                        &-start {
+                            align-items: flex-start;
+                        }
+                        &-end {
+                            align-items: flex-end
+                        }
+                    }
+                    &-stretch {
+                        align-items: stretch;
+                    }
+                    &-center {
+                        align-items: center;
+                    }
+                    &-baseline {
+                        align-items: baseline;
+                    }
+                }
+                .#{$size}-ac {
+                    &-flex {
+                        &-start {
+                            align-content: flex-start;
+                        }
+                        &-end {
+                            align-content: flex-end
+                        }
+                    }
+                    &-stretch {
+                        align-content: stretch;
+                    }
+                    &-space {
+                        &-around {
+                            align-content: space-around;
+                        }
+                        &-between {
+                            align-content: space-between;
+                        }
+                    }
+                }
+                /* flex hijos */
+                .#{$size}-flex {
+                    &-none {
+                        -ms-flex: none;
+                        -webkit-flex: none;
+                        flex: none;
+                    }
+                    &-auto {
+                        -ms-flex: auto;
+                        -webkit-flex: auto;
+                        flex: auto;
+                    }
+                }
+                .#{$size}-as {
+                    &-flex {
+                        &-start {
+                            align-self: flex-start;
+                        }
+                        &-end {
+                            align-self: flex-end
+                        }
+                    }
+                    &-stretch {
+                        align-self: stretch;
+                    }
+                    &-center {
+                        align-self: center;
+                    }
+                    &-baseline {
+                        align-self: baseline;
+                    }
+                    &-auto {
+                        align-self: auto;
+                    }
+                }
+                /* Alineaciones verticales y horizontales */
+                .#{$size}-v {
+                    &-top {
+                        vertical-align: top;
+                    }
+                    &-middle {
+                        vertical-align: middle;
+                    }
+                    &-bottom {
+                        vertical-align: bottom;
+                    }
+                    &-baseline {
+                        vertical-align: baseline;
+                    }
+                }
+                .#{$size}-left {
+                    text-align: left;
+                }
+                .#{$size}-center {
+                    text-align: center;
+                }
+                .#{$size}-right {
+                    text-align: right;
+                }
+                .#{$size}-justify {
+                    text-align: justify;
+                }
+                /* Tamaño de Fuente */
+                .#{$size}-f {
+                    &-cero {
+                        font-size: 0;
+                    }
+                    &_25 {
+                        font-size: 4px;
+                        font-size: rem(4px);
+                    }
+                    &_5 {
+                        font-size: 8px;
+                        font-size: rem(8px);
+                    }
+                    &_75 {
+                        font-size: 12px;
+                        font-size: rem(12px);
+                    }
+                    &-uno {
+                        font-size: 16px;
+                        font-size: rem(16px);
+                    }
+                    &-uno {
+                        &_25 {
+                            font-size: 20px;
+                            font-size: rem(20px);
+                        }
+                        &_5 {
+                            font-size: 24px;
+                            font-size: rem(24px);
+                        }
+                        &_75 {
+                            font-size: 28px;
+                            font-size: rem(28px);
+                        }
+                    }
+                    &-dos {
+                        font-size: 32px;
+                        font-size: rem(32px);
+                    }
+                    &-dos {
+                        &_5 {
+                            font-size: 40px;
+                            font-size: rem(40px);
+                        }
+                    }
+                    &-tres {
+                        font-size: 48px;
+                        font-size: rem(48px);
+                    }
+                    &-tres {
+                        &_5 {
+                            font-size: 56px;
+                            font-size: rem(56px);
+                        }
+                    }
+                    &-cuatro {
+                        font-size: 64px;
+                        font-size: rem(64px);
+                    }
+                    &-cuatro {
+                        &_5 {
+                            font-size: 72px;
+                            font-size: rem(72px);
+                        }
+                    }
+                    &-cinco {
+                        font-size: 80px;
+                        font-size: rem(80px);
+                    }
+                }
+                /* margin y padding*/
+                .#{$size}-m {
+                    &-auto {
+                        margin: auto;
+                    }
+                    &-cero {
+                        margin: 0;
+                    }
+                    &_25 {
+                        margin: 4px;
+                        margin: rem(4px);
+                    }
+                    &_5 {
+                        margin: 8px;
+                        margin: rem(8px);
+                    }
+                    &_75 {
+                        margin: 12px;
+                        margin: rem(12px);
+                    }
+                    &-uno {
+                        margin: 16px;
+                        margin: rem(16px);
+                    }
+                    &-uno {
+                        &_25 {
+                            margin: 20px;
+                            margin: rem(20px);
+                        }
+                        &_5 {
+                            margin: 24px;
+                            margin: rem(24px);
+                        }
+                        &_75 {
+                            margin: 28px;
+                            margin: rem(28px);
+                        }
+                    }
+                    &-dos {
+                        margin: 32px;
+                        margin: rem(32px);
+                    }
+                    &-dos {
+                        &_5 {
+                            margin: 40px;
+                            margin: rem(40px);
+                        }
+                    }
+                    &-tres {
+                        margin: 48px;
+                        margin: rem(48px);
+                    }
+                    &-tres {
+                        &_5 {
+                            margin: 56px;
+                            margin: rem(56px);
+                        }
+                    }
+                    &-cuatro {
+                        margin: 64px;
+                        margin: rem(64px);
+                    }
+                    &-cuatro {
+                        &_5 {
+                            margin: 72px;
+                            margin: rem(72px);
+                        }
+                    }
+                    &-top {
+                        &-cero {
+                            margin-top: 0;
+                        }
+                        &_25 {
+                            margin-top: 4px;
+                            margin-top: rem(4px);
+                        }
+                        &_5 {
+                            margin-top: 8px;
+                            margin-top: rem(8px);
+                        }
+                        &_75 {
+                            margin-top: 12px;
+                            margin-top: rem(12px);
+                        }
+                        &-uno {
+                            margin-top: 16px;
+                            margin-top: rem(16px);
+                        }
+                        &-uno {
+                            &_25 {
+                                margin-top: 20px;
+                                margin-top: rem(20px);
+                            }
+                            &_5 {
+                                margin-top: 24px;
+                                margin-top: rem(24px);
+                            }
+                            &_75 {
+                                margin-top: 28px;
+                                margin-top: rem(28px);
+                            }
+                        }
+                        &-dos {
+                            margin-top: 32px;
+                            margin-top: rem(32px);
+                        }
+                        &-dos {
+                            &_5 {
+                                margin-top: 40px;
+                                margin-top: rem(40px);
+                            }
+                        }
+                        &-tres {
+                            margin-top: 48px;
+                            margin-top: rem(48px);
+                        }
+                        &-tres {
+                            &_5 {
+                                margin-top: 56px;
+                                margin-top: rem(56px);
+                            }
+                        }
+                        &-cuatro {
+                            margin-top: 64px;
+                            margin-top: rem(64px);
+                        }
+                        &-cuatro {
+                            &_5 {
+                                margin-top: 72px;
+                                margin-top: rem(72px);
+                            }
+                        }
+                    }
+                    &-left {
+                        &-cero {
+                            margin-left: 0;
+                        }
+                        &_25 {
+                            margin-left: 4px;
+                            margin-left: rem(4px);
+                        }
+                        &_5 {
+                            margin-left: 8px;
+                            margin-left: rem(8px);
+                        }
+                        &_75 {
+                            margin-left: 12px;
+                            margin-left: rem(12px);
+                        }
+                        &-uno {
+                            margin-left: 16px;
+                            margin-left: rem(16px);
+                        }
+                        &-uno {
+                            &_25 {
+                                margin-left: 20px;
+                                margin-left: rem(20px);
+                            }
+                            &_5 {
+                                margin-left: 24px;
+                                margin-left: rem(24px);
+                            }
+                            &_75 {
+                                margin-left: 28px;
+                                margin-left: rem(28px);
+                            }
+                        }
+                        &-dos {
+                            margin-left: 32px;
+                            margin-left: rem(32px);
+                        }
+                        &-dos {
+                            &_5 {
+                                margin-left: 40px;
+                                margin-left: rem(40px);
+                            }
+                        }
+                        &-tres {
+                            margin-left: 48px;
+                            margin-left: rem(48px);
+                        }
+                        &-tres {
+                            &_5 {
+                                margin-left: 56px;
+                                margin-left: rem(56px);
+                            }
+                        }
+                        &-cuatro {
+                            margin-left: 64px;
+                            margin-left: rem(64px);
+                        }
+                        &-cuatro {
+                            &_5 {
+                                margin-left: 72px;
+                                margin-left: rem(72px);
+                            }
+                        }
+                    }
+                    &-right {
+                        &-cero {
+                            margin-right: 0;
+                        }
+                        &_25 {
+                            margin-right: 4px;
+                            margin-right: rem(4px);
+                        }
+                        &_5 {
+                            margin-right: 8px;
+                            margin-right: rem(8px);
+                        }
+                        &_75 {
+                            margin-right: 12px;
+                            margin-right: rem(12px);
+                        }
+                        &-uno {
+                            margin-right: 16px;
+                            margin-right: rem(16px);
+                        }
+                        &-uno {
+                            &_25 {
+                                margin-right: 20px;
+                                margin-right: rem(20px);
+                            }
+                            &_5 {
+                                margin-right: 24px;
+                                margin-right: rem(24px);
+                            }
+                            &_75 {
+                                margin-right: 28px;
+                                margin-right: rem(28px);
+                            }
+                        }
+                        &-dos {
+                            margin-right: 32px;
+                            margin-right: rem(32px);
+                        }
+                        &-dos {
+                            &_5 {
+                                margin-right: 40px;
+                                margin-right: rem(40px);
+                            }
+                        }
+                        &-tres {
+                            margin-right: 48px;
+                            margin-right: rem(48px);
+                        }
+                        &-tres {
+                            &_5 {
+                                margin-right: 56px;
+                                margin-right: rem(56px);
+                            }
+                        }
+                        &-cuatro {
+                            margin-right: 64px;
+                            margin-right: rem(64px);
+                        }
+                        &-cuatro {
+                            &_5 {
+                                margin-right: 72px;
+                                margin-right: rem(72px);
+                            }
+                        }
+                    }
+                    &-bottom {
+                        &-cero {
+                            margin-bottom: 0;
+                        }
+                        &_25 {
+                            margin-bottom: 4px;
+                            margin-bottom: rem(4px);
+                        }
+                        &_5 {
+                            margin-bottom: 8px;
+                            margin-bottom: rem(8px);
+                        }
+                        &_75 {
+                            margin-bottom: 12px;
+                            margin-bottom: rem(12px);
+                        }
+                        &-uno {
+                            margin-bottom: 16px;
+                            margin-bottom: rem(16px);
+                        }
+                        &-uno {
+                            &_25 {
+                                margin-bottom: 20px;
+                                margin-bottom: rem(20px);
+                            }
+                            &_5 {
+                                margin-bottom: 24px;
+                                margin-bottom: rem(24px);
+                            }
+                            &_75 {
+                                margin-bottom: 28px;
+                                margin-bottom: rem(28px);
+                            }
+                        }
+                        &-dos {
+                            margin-bottom: 32px;
+                            margin-bottom: rem(32px);
+                        }
+                        &-dos {
+                            &_5 {
+                                margin-bottom: 40px;
+                                margin-bottom: rem(40px);
+                            }
+                        }
+                        &-tres {
+                            margin-bottom: 48px;
+                            margin-bottom: rem(48px);
+                        }
+                        &-tres {
+                            &_5 {
+                                margin-bottom: 56px;
+                                margin-bottom: rem(56px);
+                            }
+                        }
+                        &-cuatro {
+                            margin-bottom: 64px;
+                            margin-bottom: rem(64px);
+                        }
+                        &-cuatro {
+                            &_5 {
+                                margin-bottom: 72px;
+                                margin-bottom: rem(72px);
+                            }
+                        }
+                    }
+                }
+                .#{$size}-p {
+                    &-auto {
+                        padding: auto;
+                    }
+                    &-cero {
+                        padding: 0;
+                    }
+                    &_25 {
+                        padding: 4px;
+                        padding: rem(4px);
+                    }
+                    &_5 {
+                        padding: 8px;
+                        padding: rem(8px);
+                    }
+                    &_75 {
+                        padding: 12px;
+                        padding: rem(12px);
+                    }
+                    &-uno {
+                        padding: 16px;
+                        padding: rem(16px);
+                    }
+                    &-uno {
+                        &_25 {
+                            padding: 20px;
+                            padding: rem(20px);
+                        }
+                        &_5 {
+                            padding: 24px;
+                            padding: rem(24px);
+                        }
+                        &_75 {
+                            padding: 28px;
+                            padding: rem(28px);
+                        }
+                    }
+                    &-dos {
+                        padding: 32px;
+                        padding: rem(32px);
+                    }
+                    &-dos {
+                        &_5 {
+                            padding: 40px;
+                            padding: rem(40px);
+                        }
+                    }
+                    &-tres {
+                        padding: 48px;
+                        padding: rem(48px);
+                    }
+                    &-tres {
+                        &_5 {
+                            padding: 56px;
+                            padding: rem(56px);
+                        }
+                    }
+                    &-cuatro {
+                        padding: 64px;
+                        padding: rem(64px);
+                    }
+                    &-cuatro {
+                        &_5 {
+                            padding: 72px;
+                            padding: rem(72px);
+                        }
+                    }
+                    &-top {
+                        &-cero {
+                            padding-top: 0;
+                        }
+                        &_25 {
+                            padding-top: 4px;
+                            padding-top: rem(4px);
+                        }
+                        &_5 {
+                            padding-top: 8px;
+                            padding-top: rem(8px);
+                        }
+                        &_75 {
+                            padding-top: 12px;
+                            padding-top: rem(12px);
+                        }
+                        &-uno {
+                            padding-top: 16px;
+                            padding-top: rem(16px);
+                        }
+                        &-uno {
+                            &_25 {
+                                padding-top: 20px;
+                                padding-top: rem(20px);
+                            }
+                            &_5 {
+                                padding-top: 24px;
+                                padding-top: rem(24px);
+                            }
+                            &_75 {
+                                padding-top: 28px;
+                                padding-top: rem(28px);
+                            }
+                        }
+                        &-dos {
+                            padding-top: 32px;
+                            padding-top: rem(32px);
+                        }
+                        &-dos {
+                            &_5 {
+                                padding-top: 40px;
+                                padding-top: rem(40px);
+                            }
+                        }
+                        &-tres {
+                            padding-top: 48px;
+                            padding-top: rem(48px);
+                        }
+                        &-tres {
+                            &_5 {
+                                padding-top: 56px;
+                                padding-top: rem(56px);
+                            }
+                        }
+                        &-cuatro {
+                            padding-top: 64px;
+                            padding-top: rem(64px);
+                        }
+                        &-cuatro {
+                            &_5 {
+                                padding-top: 72px;
+                                padding-top: rem(72px);
+                            }
+                        }
+                    }
+                    &-left {
+                        &-cero {
+                            padding-left: 0;
+                        }
+                        &_25 {
+                            padding-left: 4px;
+                            padding-left: rem(4px);
+                        }
+                        &_5 {
+                            padding-left: 8px;
+                            padding-left: rem(8px);
+                        }
+                        &_75 {
+                            padding-left: 12px;
+                            padding-left: rem(12px);
+                        }
+                        &-uno {
+                            padding-left: 16px;
+                            padding-left: rem(16px);
+                        }
+                        &-uno {
+                            &_25 {
+                                padding-left: 20px;
+                                padding-left: rem(20px);
+                            }
+                            &_5 {
+                                padding-left: 24px;
+                                padding-left: rem(24px);
+                            }
+                            &_75 {
+                                padding-left: 28px;
+                                padding-left: rem(28px);
+                            }
+                        }
+                        &-dos {
+                            padding-left: 32px;
+                            padding-left: rem(32px);
+                        }
+                        &-dos {
+                            &_5 {
+                                padding-left: 40px;
+                                padding-left: rem(40px);
+                            }
+                        }
+                        &-tres {
+                            padding-left: 48px;
+                            padding-left: rem(48px);
+                        }
+                        &-tres {
+                            &_5 {
+                                padding-left: 56px;
+                                padding-left: rem(56px);
+                            }
+                        }
+                        &-cuatro {
+                            padding-left: 64px;
+                            padding-left: rem(64px);
+                        }
+                        &-cuatro {
+                            &_5 {
+                                padding-left: 72px;
+                                padding-left: rem(72px);
+                            }
+                        }
+                    }
+                    &-right {
+                        &-cero {
+                            padding-right: 0;
+                        }
+                        &_25 {
+                            padding-right: 4px;
+                            padding-right: rem(4px);
+                        }
+                        &_5 {
+                            padding-right: 8px;
+                            padding-right: rem(8px);
+                        }
+                        &_75 {
+                            padding-right: 12px;
+                            padding-right: rem(12px);
+                        }
+                        &-uno {
+                            padding-right: 16px;
+                            padding-right: rem(16px);
+                        }
+                        &-uno {
+                            &_25 {
+                                padding-right: 20px;
+                                padding-right: rem(20px);
+                            }
+                            &_5 {
+                                padding-right: 24px;
+                                padding-right: rem(24px);
+                            }
+                            &_75 {
+                                padding-right: 28px;
+                                padding-right: rem(28px);
+                            }
+                        }
+                        &-dos {
+                            padding-right: 32px;
+                            padding-right: rem(32px);
+                        }
+                        &-dos {
+                            &_5 {
+                                padding-right: 40px;
+                                padding-right: rem(40px);
+                            }
+                        }
+                        &-tres {
+                            padding-right: 48px;
+                            padding-right: rem(48px);
+                        }
+                        &-tres {
+                            &_5 {
+                                padding-right: 56px;
+                                padding-right: rem(56px);
+                            }
+                        }
+                        &-cuatro {
+                            padding-right: 64px;
+                            padding-right: rem(64px);
+                        }
+                        &-cuatro {
+                            &_5 {
+                                padding-right: 72px;
+                                padding-right: rem(72px);
+                            }
+                        }
+                    }
+                    &-bottom {
+                        &-cero {
+                            padding-bottom: 0;
+                        }
+                        &_25 {
+                            padding-bottom: 4px;
+                            padding-bottom: rem(4px);
+                        }
+                        &_5 {
+                            padding-bottom: 8px;
+                            padding-bottom: rem(8px);
+                        }
+                        &_75 {
+                            padding-bottom: 12px;
+                            padding-bottom: rem(12px);
+                        }
+                        &-uno {
+                            padding-bottom: 16px;
+                            padding-bottom: rem(16px);
+                        }
+                        &-uno {
+                            &_25 {
+                                padding-bottom: 20px;
+                                padding-bottom: rem(20px);
+                            }
+                            &_5 {
+                                padding-bottom: 24px;
+                                padding-bottom: rem(24px);
+                            }
+                            &_75 {
+                                padding-bottom: 28px;
+                                padding-bottom: rem(28px);
+                            }
+                        }
+                        &-dos {
+                            padding-bottom: 32px;
+                            padding-bottom: rem(32px);
+                        }
+                        &-dos {
+                            &_5 {
+                                padding-bottom: 40px;
+                                padding-bottom: rem(40px);
+                            }
+                        }
+                        &-tres {
+                            padding-bottom: 48px;
+                            padding-bottom: rem(48px);
+                        }
+                        &-tres {
+                            &_5 {
+                                padding-bottom: 56px;
+                                padding-bottom: rem(56px);
+                            }
+                        }
+                        &-cuatro {
+                            padding-bottom: 64px;
+                            padding-bottom: rem(64px);
+                        }
+                        &-cuatro {
+                            &_5 {
+                                padding-bottom: 72px;
+                                padding-bottom: rem(72px);
+                            }
+                        }
+                    }
+                }
+                /* Borde y Display */
+                .#{$size}-border {
+                    border: thin solid color(dark);
+                }
+                .#{$size}-noborder {
+                    border: 0;
+                }
+                .#{$size}-round {
+                    border-radius: 50%;
+                }
+                .#{$size}-noround {
+                    border-radius: 0;
+                }
+                .#{$size}-inline {
+                    display: inline;
+                }
+                .#{$size}-block {
+                    display: block;
+                }
+                .#{$size}-none {
+                    display: none;
+                }
+                .#{$size}-bullet {
+                    margin-left: 16px;
+                    margin-left: rem(16px);
+                    list-style-type: inherit;
+                    list-style-position: inside;
+                }
+                .#{$size}-nobullet {
+                    margin-left: 0;
+                    list-style-type: none;
+                }
+            }
+        }
+    }
